@@ -1,6 +1,6 @@
 import pygame as pg
 import moderngl as mgl
-import glm
+import asyncio
 import sys, math
 
 from .pymgl.graphics_engine import GraphicsEngine
@@ -90,17 +90,17 @@ class Game:
 
         pg.mixer.init()
         pg.mixer.set_num_channels(64)
-        pg.mixer.music.load(filename='./assets/sounds/bullethell_synth.wav')
+        pg.mixer.music.load(filename='./assets/sounds/bullethell_synth.ogg')
         self.volume_level = 0.5
         pg.mixer.music.set_volume(self.volume_level)
         pg.mixer.music.play(loops=-1)
         self.sfx = {
-            'hit': pg.mixer.Sound(file='./assets/sounds/death.wav'),
+            'hit': pg.mixer.Sound(file='./assets/sounds/death.ogg'),
             'kill': [
-                pg.mixer.Sound(file=f'./assets/sounds/bullethell_kill{i+1}.wav')
+                pg.mixer.Sound(file=f'./assets/sounds/bullethell_kill{i+1}.ogg')
                 for i in range(5)],
-            'turn': pg.mixer.Sound(file='./assets/sounds/bullethell_turn.wav'),
-            'countdown': pg.mixer.Sound(file='./assets/sounds/countdown.wav')
+            'turn': pg.mixer.Sound(file='./assets/sounds/bullethell_turn.ogg'),
+            'countdown': pg.mixer.Sound(file='./assets/sounds/countdown.ogg')
         }
         [sound.set_volume(0.25) for sound in self.sfx['kill']]
         [sound.fadeout(500) for sound in self.sfx['kill']]
@@ -130,7 +130,7 @@ class Game:
         self.current_menu = 0
         self.next_menu = 0
     
-    def run(self):
+    async def run(self):
         while True:
             
             retval = self.menus[self.current_menu].update()
@@ -180,6 +180,8 @@ class Game:
 
             self.clock.tick()
             pg.display.flip()
+
+            await asyncio.sleep(0)
 
             # pg.display.set_caption(f'fps: {self.clock.get_fps()}')
     

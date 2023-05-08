@@ -759,8 +759,8 @@ class DisclaimerIntro:
                          self.font_color, 15, 'left', box_width=width-100)
         
         text_top += self.font.text_height(self.photosensitivity_disclaimer_second, 15, width-100) + 50
-        # self.font.render(self.display, self.web_version_msg, 50, text_top, 
-        #                  self.font_color, 15, 'left', box_width=width-100)
+        self.font.render(self.display, self.web_version_msg, 50, text_top, 
+                         self.font_color, 15, 'left', box_width=width-100)
         
         self.font.render(self.display, 'click anywhere to continue', width/2, height-50, 
                          self.font_color, 15, 'center')
