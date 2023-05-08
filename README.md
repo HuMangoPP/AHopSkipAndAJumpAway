@@ -4,7 +4,7 @@
 
 Made using a custom wrapper over Pygame and ModernGL. Maybe I'll get around to optimizing it, documenting it, and releasing it.
 
-Check out the Itch page, where you can download (for windows) or play in browser.
+Check out the [Itch page](https://manguino.itch.io/a-hop-skip-and-a-jump-away), where you can download (for windows) or play in browser.
 
 ![Main Menu](https://user-images.githubusercontent.com/49696312/236731787-938b52c3-db88-4ec8-94c5-944965c94192.png)
 
