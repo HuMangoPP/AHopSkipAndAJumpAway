@@ -2,7 +2,7 @@
 
 ### Submission for the 2023 Bullet Hell Jam
 
-Made using a custom wrapper over Pygame and ModernGL. Maybe I'll get around to optimizing it, documenting it, and releasing it.
+Made using a custom wrapper over Pygame and ModernGL that I built during the first part of the jam. Maybe I'll get around to optimizing it, documenting it, and releasing it.
 
 Check out the [Itch page](https://manguino.itch.io/a-hop-skip-and-a-jump-away), where you can download the game. Unfortunately, I can't seem to get pygbag to compile to WASM (probably because of the libraries I use and the size of the game), so only the executable is available right now. The page includes download instructions with required libraries.
 
