@@ -257,7 +257,7 @@ class InGame:
         if self.countdown > 0 and self.show_tutorial:
             self.font.render(self.overlay, 'first, a little demo', 30, 30, 
                              (255, 255, 255), 15, 'left')
-            self.font.render(self.overlay, 'press space or click the mouse to leap to your shadow', 30, 60, 
+            self.font.render(self.overlay, 'press space or click the mouse to leap to your shadow. leap over enemies to capture them.', 30, 60, 
                              (255, 255, 255), 15, 'left', box_width=self.resolution[0]*3/4)
 
         if self.paused:
